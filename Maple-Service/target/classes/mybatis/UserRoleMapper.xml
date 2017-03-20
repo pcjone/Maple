@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.Maple.dao.UserRoleMapper">
+	<resultMap id="BaseResultMap" type="org.Maple.Api.entity.UserRole">
+		<result column="id" property="id" />
+		<result column="user_id" property="userId" />
+		<result column="role_id" property="roleId" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,
+		user_id,
+		role_Id
+	</sql>
+
+	<!-- 根据id查询 -->
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="Object">
+		select
+		<include refid="Base_Column_List" />
+		from SYS_USER_ROLE where id = #{id}
+	</select>
+
+	<!-- 删除记录 -->
+	<delete id="deleteByPrimaryKey" parameterType="Object">
+		delete from SYS_USER_ROLE where id = #{id}
+	</delete>
+</mapper>

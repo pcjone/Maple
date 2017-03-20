@@ -1,0 +1,6 @@
+org/Maple/Api/entity/Permission.class
+org/Maple/Api/entity/Role.class
+org/Maple/Api/entity/RolePermission.class
+org/Maple/Api/entity/System.class
+org/Maple/Api/entity/User.class
+org/Maple/Api/entity/UserRole.class
