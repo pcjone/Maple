@@ -10,6 +10,7 @@
 		<module>Maple-Common</module>
 		<module>Maple-Service</module>
 		<module>Maple-Api</module>
+		<module>Maple-Web</module>
 	</modules>
 
 	<properties>
@@ -131,6 +132,11 @@
 			<version>${pagehelper.version}</version>
 		</dependency>
 		<!-- spring核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -295,6 +301,11 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
 			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectj.version}</version>
 		</dependency>
 	</dependencies>
 

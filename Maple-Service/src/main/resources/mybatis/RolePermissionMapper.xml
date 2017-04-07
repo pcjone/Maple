@@ -5,8 +5,8 @@
 <mapper namespace="org.Maple.dao.RolePermissionMapper">
 	<resultMap id="BaseResultMap" type="org.Maple.Api.entity.RolePermission">
 		<result column="id" property="id" />
-		<result colum="role_id" property="roleId"/>
-		<result colum="permission_id" property="permissionId"/>
+		<result column="role_id" property="roleId"/>
+		<result column="permission_id" property="permissionId"/>
 	</resultMap>
 
 	<sql id="Base_Column_List">

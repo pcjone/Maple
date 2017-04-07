@@ -5,14 +5,14 @@
 <mapper namespace="org.Maple.dao.PermissionMapper">
 	<resultMap id="BaseResultMap" type="org.Maple.Api.entity.Permission">
 		<result column="id" property="id" />
-		<result column="user_name" property="userName" />
-		<result column="password" property="password" />
-		<result column="salt" property="salt" />
-		<result column="avatar" property="avatar" />
+		<result column="system_id" property="systemId" />
+		<result column="parent_id" property="parentId" />
 		<result column="name" property="name" />
-		<result column="phone" property="phone" />
-		<result column="email" property="email" />
-		<result column="sex" property="sex" />
+		<result column="type" property="type" />
+		<result column="permission_value" property="permissionValue" />
+		<result column="uri" property="uri" />
+		<result column="icon" property="icon" />
+		<result column="orders" property="orders" />
 		<result column="create_user" property="createUser" />
 		<result column="update_user" property="updateUser" />
 		<result column="create_date" property="createDate" />
@@ -24,14 +24,14 @@
 
 	<sql id="Base_Column_List">
 		id,
-		user_name,
-		password,
-		salt,
-		avatar,
+		system_id,
+		parent_id,
 		name,
-		phone,
-		email,
-		sex,
+		type,
+		permission_value,
+		uri,
+		icon,
+		orders,
 		create_user,
 		update_user,
 		create_date,
@@ -46,11 +46,116 @@
 		parameterType="Object">
 		select
 		<include refid="Base_Column_List" />
-		from SYS_ROLE where id = #{id}
+		from SYS_PERMISSION where id = #{id}
 	</select>
 
 	<!-- 删除记录 -->
 	<delete id="deleteByPrimaryKey" parameterType="Object">
-		delete from SYS_ROLE where id = #{id}
+		delete from SYS_PERMISSION where id = #{id}
 	</delete>
+	
+	<insert id="insert" parameterType="Object">
+		insert into SYS_PERMISSION
+	  	<trim prefix="(" suffix=")" suffixOverrides="," >
+	    <if test="id != null" >
+		    id,
+		</if>
+	 	<if test="systemId != null " >
+		system_id,
+		</if>
+		<if test="parentId != null and parentId != '' " >
+		parent_id,
+		</if>
+    	<if test="name != null and name != '' " >
+		name,
+		</if>
+    	<if test="type != null " >
+		type,
+		</if>
+    	<if test="permissionValue != null and permissionValue != '' " >
+		permission_value,
+		</if>
+    	<if test="uri != null and uri != '' " >
+		uri,
+		</if>
+		<if test="icon != null and icon != '' " >
+		icon,
+		</if>
+    	<if test="orders != null " >
+		orders,
+		</if>
+    	<if test="createUser != null and createUser != '' " >
+		create_user,
+		</if>
+		<if test="updateUser != null and updateUser != '' " >
+		update_user,
+		</if>
+		<if test="createDate != null " >
+		create_date,
+		</if>
+		<if test="updateDate != null" >
+		update_date,
+		</if>
+		<if test="remark != null and remark != '' " >
+		remark,
+		</if>
+		<if test="status != null" >
+		status,
+		</if>
+		<if test="deleted != null" >
+		deleted,
+		</if>
+    	</trim>
+	values
+	 <trim prefix="(" suffix=")" suffixOverrides="," >
+	    <if test="id != null" >
+		   #{id},
+		</if>
+	 	<if test="systemId != null " >
+  		<![CDATA[  #{systemId}, ]]>
+    	</if>
+    	<if test="parentId != null and parentId != '' " >
+		<![CDATA[  #{parentId}, ]]>
+		</if>
+    	<if test="name != null and name != '' " >
+  		<![CDATA[  #{name}, ]]>
+    	</if>
+    	<if test="type != null " >
+  		<![CDATA[  #{type}, ]]>
+    	</if>
+    	<if test="permissionValue != null and permissionValue != '' " >
+  		<![CDATA[  #{permissionValue}, ]]>
+    	</if>
+    	<if test="uri != null and uri != '' " >
+  		<![CDATA[  #{uri}, ]]>
+    	</if>
+    	<if test="icon != null and icon != '' " >
+  		<![CDATA[  #{icon}, ]]>
+    	</if>
+    	<if test="orders != null " >
+  		<![CDATA[  #{orders}, ]]>
+    	</if>
+    	<if test="createUser != null and createUser != '' " >
+  		<![CDATA[  #{createUser}, ]]>
+    	</if>
+    	<if test="updateUser != null and updateUser != '' " >
+  		<![CDATA[  #{updateUser}, ]]>
+    	</if>
+    	<if test="createDate != null " >
+  		<![CDATA[  #{createDate}, ]]>
+    	</if>
+    	<if test="updateDate != null " >
+  		<![CDATA[  #{updateDate}, ]]>
+    	</if>
+    	<if test="remark != null and remark != '' " >
+  		<![CDATA[  #{remark}, ]]>
+    	</if>
+    	<if test="status != null " >
+  		<![CDATA[  #{status}, ]]>
+    	</if>
+    	<if test="deleted != null " >
+  		<![CDATA[  #{deleted}, ]]>
+    	</if>
+    	 </trim>
+	</insert>
 </mapper>

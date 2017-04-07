@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Maple-Service:war">
+    <output-path>$PROJECT_DIR$/Maple-Service/target</output-path>
+    <root id="archive" name="Maple-Service.war">
+      <element id="artifact" artifact-name="Maple-Service:war exploded" />
+    </root>
+  </artifact>
+</component>

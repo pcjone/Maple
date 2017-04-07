@@ -6,7 +6,7 @@
     <property name="java.vm.version" value="24.71-b01"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/panlei/work/eworkspace/Maple"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/panlei/git/Maple"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/panlei/work/eworkspace/Maple"/>
+    <property name="user.dir" value="/Users/panlei/git/Maple"/>
     <property name="java.runtime.version" value="1.7.0_71-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -26,7 +26,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/panlei/work/eworkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf4449829199992243935.tmp"/>
+    <property name="classworlds.conf" value="/Users/panlei/work/eworkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2347523880628928577.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/panlei/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
